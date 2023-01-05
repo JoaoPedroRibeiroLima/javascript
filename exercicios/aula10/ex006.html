@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evetos DOM</title>
+    <style>
+        div#caixa{
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            color: white;
+            font-size: 2em;
+            line-height: 200px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa" onmouseenter="entrou()" onmouseout="saiu()">
+        interaja...
+    </div>
+    
+    <script>
+        var a = window.document.getElementById('caixa')
+
+        a.addEventListener('click', clicou)
+
+        function entrou(){
+            a.innerText = 'entrou'
+        }
+
+        function saiu(){
+            a.innerText = 'saiu'
+            a.style.background = 'green'
+        }
+
+        function clicou(){
+            a.innerText = 'clicou!!!'
+            a.style.background = 'red'
+        }
+    </script>
+</body>
+</html>
