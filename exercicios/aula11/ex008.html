@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limite de velocidade</title>
+</head>
+<body>
+    <h1>Análise de velocidade</h1>
+    <input type="number" name="txtv" id="txtv">Km/h             <input type="button" value="Verificar" onclick="calc()">
+    <div id="res">
+        resultado...
+    </div>
+    <script>
+        function calc(){
+            var txtv = document.getElementById('txtv')
+            var vel = Number(txtv.value)
+            document.getElementById('res').innerText = `A velocidade do seu carro é ${vel}Km/h`
+            if (vel > 60){
+                res.innerText += '. Você ultrapassou a velocidade permitida. MULTADO!'
+            }
+        }
+    </script>
+</body>
+</html>
