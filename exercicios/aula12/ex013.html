@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da semana</title>
+</head>
+<body>
+    <p>Hoje é <span id="dia"></span></p>
+
+    <script>
+        var diatxt = document.getElementById('dia')
+        var agora = new Date()
+        var dia = agora.getDay()
+        
+        switch (dia){
+            case 0:
+                var dia = 'domingo'
+                break
+            case 1:
+                var dia = 'segunda-feira'
+                break
+            case 2:
+                var dia = 'terça-feira'
+                break
+            case 3:
+                var dia = 'quarta-feira'
+                break
+            case 4:
+                var dia = 'quinta-feira'
+                break
+            case 5:
+                var dia = 'sexta-feira'
+                break
+            case 6:
+                var dia = 'sabado'
+                break
+        }
+
+        diatxt.innerText = dia
+    </script>
+</body>
+</html>
