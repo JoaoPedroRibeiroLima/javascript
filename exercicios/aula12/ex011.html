@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+</head>
+<body>
+    <h1>Voto obrigatorio ou não</h1>
+    <input type="number" name="idade" id="idade">             <input type="button" value="verificar" onclick="analise()">
+    <div id="res">
+
+    </div>
+    <script>
+        function analise(){
+            var idadetxt = document.getElementById('idade')
+            var idade = Number(idadetxt.value)
+            var res = document.getElementById('res')
+            res.innerHTML += `<p>Você tem ${idade} anos.</p>` 
+            if (idade < 16) {
+                res.innerHTML += `<p>Não vota.</p>`
+            } else if (idade < 18){
+                res.innerHTML += `<p>Voto opcional</p>`
+            } else{
+                res.innerHTML += `<p>Voto obrigatorio</p>`
+            }
+        }
+    </script>
+</body>
+</html>

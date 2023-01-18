@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bom dia/tarde/noite</title>
+</head>
+<body>
+    <div id="horario">
+
+    </div>
+
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var horario = document.getElementById('horario')
+        horario.innerHTML += `<p>Agora são extamente ${hora} horas.</p>`
+        if (hora < 12) {
+            horario.innerHTML += `<p>Bom dia!</p>`
+        } else if (hora <= 18) {
+            horario.innerHTML += `<p>Boa tarde!</p>`
+        } else {
+            horario.innerHTML += `<p>Boa noite!</p>`
+        }
+    </script>
+</body>
+</html>
